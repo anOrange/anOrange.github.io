@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://skyvoid.com">
-  <title>Tag: 折腾 | 一个橙子的博客</title>
+  <title>IOS中wkwebview的离线缓存版本控制 | 一个橙子的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="一个橙子的博客">
-<meta property="og:url" content="http://skyvoid.com/tags/折腾/index.html">
+  <meta name="description" content="我们IOS主app下面的一个内容模块是H5页面，H5页面首次打开的时候需要等待网络加载，用户体验会比原生的差很多。但是这个H5站点暂时是不会用其他方式再实现一次了。所以先从WEB容器上面做手脚。WKWebview本身是有缓存机制的，但是第一次加载的时候难免需要从网络请求。然后就有了做个离线包的想法。原理很简单，在IOS打包的时候，直接把静态资源压缩，将压缩包放进App安装包中。这样第一次打开就不用">
+<meta name="keywords" content="javascript,H5,IOS,WKWebview">
+<meta property="og:type" content="article">
+<meta property="og:title" content="IOS中wkwebview的离线缓存版本控制">
+<meta property="og:url" content="http://skyvoid.com/2017/09/22/IOS中wkwebview的离线缓存版本控制/index.html">
 <meta property="og:site_name" content="一个橙子的博客">
+<meta property="og:description" content="我们IOS主app下面的一个内容模块是H5页面，H5页面首次打开的时候需要等待网络加载，用户体验会比原生的差很多。但是这个H5站点暂时是不会用其他方式再实现一次了。所以先从WEB容器上面做手脚。WKWebview本身是有缓存机制的，但是第一次加载的时候难免需要从网络请求。然后就有了做个离线包的想法。原理很简单，在IOS打包的时候，直接把静态资源压缩，将压缩包放进App安装包中。这样第一次打开就不用">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-07-29T08:26:58.195Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="一个橙子的博客">
+<meta name="twitter:title" content="IOS中wkwebview的离线缓存版本控制">
+<meta name="twitter:description" content="我们IOS主app下面的一个内容模块是H5页面，H5页面首次打开的时候需要等待网络加载，用户体验会比原生的差很多。但是这个H5站点暂时是不会用其他方式再实现一次了。所以先从WEB容器上面做手脚。WKWebview本身是有缓存机制的，但是第一次加载的时候难免需要从网络请求。然后就有了做个离线包的想法。原理很简单，在IOS打包的时候，直接把静态资源压缩，将压缩包放进App安装包中。这样第一次打开就不用">
   
     <link rel="alternative" href="/atom.xml" title="一个橙子的博客" type="application/atom+xml">
   
@@ -162,72 +167,229 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-IOS中wkwebview的离线缓存版本控制" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/22/14年MBPR外接显卡记录-Akitio-Node/" class="archive-article-date">
-  	<time datetime="2017-08-22T08:27:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-22</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/22/14年MBPR外接显卡记录-Akitio-Node/">14年MBPR外接显卡记录(Akitio Node via TB3-&gt;TB2 adapter + GTX1060 + win10/macOS)</a>
+    <h1 class="article-title" itemprop="name">
+      IOS中wkwebview的离线缓存版本控制
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/09/22/IOS中wkwebview的离线缓存版本控制/" class="archive-article-date">
+  	<time datetime="2017-09-22T07:21:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>我们IOS主app下面的一个内容模块是H5页面，H5页面首次打开的时候需要等待网络加载，用户体验会比原生的差很多。但是这个H5站点暂时是不会用其他方式再实现一次了。所以先从WEB容器上面做手脚。<br>WKWebview本身是有缓存机制的，但是第一次加载的时候难免需要从网络请求。然后就有了做个离线包的想法。<br>原理很简单，在IOS打包的时候，直接把静态资源压缩，将压缩包放进App安装包中。这样第一次打开就不用从网络请求了。<br><a id="more"></a></p>
+<h3 id="但是具体实现起来，还是有几个问题要考虑的"><a href="#但是具体实现起来，还是有几个问题要考虑的" class="headerlink" title="但是具体实现起来，还是有几个问题要考虑的:"></a>但是具体实现起来，还是有几个问题要考虑的:</h3><ul>
+<li>缓存规则<br>哪些文件需要缓存在本地，用本地的资源替换，这需要有个配置。 </li>
+<li>资源的替换方式<br>需要监听网络请求，把符合缓存规则的请求拦截，用本地资源做替换。</li>
+<li>离线包版本问题<br>如果用户app的版本打包提审后，线上H5的又有了更新，那离线包的资源就比线上的老，如果直接用离线包来展示，可能会出现问题。<br>当发现离线包比较旧的时候，就需要重新从网络请求资源。但如果所有资源都重新从网络请求那就基本相当于离线包失效了。<br>如果一个2M的离线包，只更新了10K的内容，应该就可以采用创建diff的方式来打更新补丁。这样就可以利用起离线包资源。 </li>
+<li>版本更新逻辑<br>这主要是产品逻辑问题。<br>用户进入模块的时候，需要请求版本信息接口，如果有新的版本，是先展示旧版本，后台静默更新，下次打开页面时自动更新;还是提示用户更新，主动更新后重启。<br>如果用旧的离线包来展示，就需要做好数据接口的版本控制，这个对后端要求较高；或者保证接口的更新必须兼容旧版本前端代码，这个在原生app上面应该都是可以满足的。<br>更细致的，可以在资源版本信息上面加上控制字段，判断哪些版本是不必须立即更新的。以及加上预下载机制，在版本上线前把资源提前下发到客户端。  </li>
+<li>离线包生效机制<br>首次进入模块时，离线包是在资源目录中，还没有存在沙盒文件系统，需要从资源包中解析并取出。APP更新时，已经有了本地离线包，但是也还需要与线上的离线包和APP的安装包作比较，这里得注意他们的的比较逻辑。 </li>
+<li>缓存文件的清理机制<br>下载的缓存包哪些已经失效了，需要从本地删除。</li>
+</ul>
+<h2 id="工作流程图"><a href="#工作流程图" class="headerlink" title="工作流程图"></a>工作流程图</h2><h1 id="现在主要讨论前三个问题"><a href="#现在主要讨论前三个问题" class="headerlink" title="现在主要讨论前三个问题:"></a>现在主要讨论前三个问题:</h1><h2 id="缓存规则和缓存版本问题"><a href="#缓存规则和缓存版本问题" class="headerlink" title="缓存规则和缓存版本问题"></a>缓存规则和缓存版本问题</h2><p>  缓存配置，我们是用一个json文件来记录的。分本地端配置和服务端配置。 </p>
+<ul>
+<li>本地端的配置文件<br>打包APP时获得，或者请求远端接口后保存在本地文件夹中。 resourceList 中没有 diff 字段。主要用于记录本地的离线包文件列表。本地配置文件用 “版本号.json” 文件名存储。</li>
+<li>服务器端配置文件<br>在服务器后台配置，前端代码打包后，更新。<br>请求远程配置文件的时候会带上本地配置文件最高版本号字段，服务器端根据版本号判断是否有diff包。打包时可以跟通过参数配置带 diff 包的最低版本，默认跨3个版本，太远的版本必要性也不是很大。<br>如果 diff 包版本字符数过大(这里定位5k)，则放弃 diff 字段，直接全文件下载。 </li>
+<li><p>activeTime<br>缓存文件生效时间。可以在版本正式上线前将更新文件缓存到本地。activeTime 时间到的时候资源生效。</p>
+<p>配置文件内容大致如下：  </p>
+</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"version"</span>: <span class="string">"4.0.1"</span>,</span><br><span class="line">  <span class="attr">"activeTime"</span>: <span class="string">"版本生效时间，用于预下载升级包"</span>,</span><br><span class="line">  <span class="attr">"cached"</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">"resourceList"</span>: [</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">"downUrl"</span>: <span class="string">"资源下载地址"</span>,</span><br><span class="line">    <span class="attr">"resourceID"</span>: <span class="string">"资源id"</span>,</span><br><span class="line">    <span class="attr">"activeTime"</span>: <span class="string">"资源生效时间，用于预下载升级包"</span>,</span><br><span class="line">    <span class="attr">"type"</span>: <span class="number">3</span>,</span><br><span class="line">    <span class="attr">"MIMEType"</span>: <span class="string">"text/css"</span>,</span><br><span class="line">    <span class="attr">"version"</span>: <span class="number">2</span>,</span><br><span class="line">    <span class="attr">"matchUrl"</span>: <span class="string">"资源匹配正则"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">"downUrl"</span>: <span class="string">"资源下载地址"</span>,</span><br><span class="line">    <span class="attr">"resourceID"</span>: <span class="string">"id_mainindexjs"</span>,</span><br><span class="line">    <span class="attr">"type"</span>: <span class="number">4</span>,</span><br><span class="line">    <span class="attr">"MIMEType"</span>: <span class="string">"application/x-javascript"</span>,</span><br><span class="line">    <span class="attr">"version"</span>: <span class="number">4</span>,</span><br><span class="line">    <span class="attr">"matchUrl"</span>: <span class="string">"资源匹配正则"</span>,</span><br><span class="line">    <span class="attr">"diff"</span>: <span class="string">"补丁包"</span></span><br><span class="line">  &#125;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>  version 用来标识配置的版本号， resourceList 用来存储缓存的资源文件列表。</p>
+<h3 id="request-替换和存储"><a href="#request-替换和存储" class="headerlink" title="request 替换和存储"></a>request 替换和存储</h3><ul>
+<li><p>request 拦截<br>IOSAPP 中的网络请求会走苹果的 URL Loading System。 这里用到了 NSURLProtocol 这个协议。具体的使用可以参照网文，要注意的就是:</p>
+<ul>
+<li>NSURLProtocol 是可以注册多个 NSURLProtocol 子类的，而且是全局的;</li>
+<li>还有就是 <strong> POST请求BODY丢失和协议头跨域 </strong> 的坑。 </li>
+</ul>
+<p>我们的做法是，在 WKWebview 的 decidePolicyForNavigationAction 方法中修改匹配url的协议头为自定义schame。<br>为了不影响其他模块的url拦截，最好选取一个比较特别的schame。然后在自定义的 WKWebview 中注册这个 schame： </p>
+</li>
+</ul>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">+ (<span class="keyword">void</span>)registerURLProtocol</span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">if</span> (regURLProtocolCounter == <span class="number">0</span>)&#123;</span><br><span class="line">    [<span class="built_in">NSURLProtocol</span> registerClass:[DEMOURLProtocol <span class="keyword">class</span>]];</span><br><span class="line">    [<span class="built_in">NSURLProtocol</span> wk_registerScheme:<span class="string">@"自定义schame"</span>];</span><br><span class="line">  &#125;</span><br><span class="line">  regURLProtocolCounter ++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>  在自定义的 DEMOURLProtocol 的 <code>- (void)startLoading</code> 方法中放入自定义的 ResourceLoader。<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)startLoading</span><br><span class="line">&#123;</span><br><span class="line">  _startTime = [<span class="built_in">NSDate</span> date];</span><br><span class="line">  <span class="built_in">NSMutableURLRequest</span> *mutableReqeust = [[<span class="keyword">self</span> request] mutableCopy];</span><br><span class="line">  <span class="comment">//给我们处理过的请求设置一个标识符, 防止无限循环,</span></span><br><span class="line">  [<span class="built_in">NSURLProtocol</span> setProperty:@YES forKey:PLNSURLProtocolHKey inRequest:mutableReqeust];</span><br><span class="line">  <span class="built_in">NSDictionary</span>* dic = [[PLResourceLoader sharedInstance]responseWithRequest:mutableReqeust];</span><br><span class="line">  <span class="keyword">if</span> (DICTIONARYHASVALUE(dic))&#123;</span><br><span class="line">    [<span class="keyword">self</span>.client URLProtocol:<span class="keyword">self</span> didReceiveResponse:dic[<span class="string">@"response"</span>] cacheStoragePolicy:<span class="built_in">NSURLCacheStorageAllowed</span>];</span><br><span class="line">    [<span class="keyword">self</span>.client URLProtocol:<span class="keyword">self</span> didLoadData:dic[<span class="string">@"data"</span>]];</span><br><span class="line">    [<span class="keyword">self</span>.client URLProtocolDidFinishLoading:<span class="keyword">self</span>];</span><br><span class="line">  &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    <span class="built_in">NSURLSession</span> *session = [<span class="built_in">NSURLSession</span> sessionWithConfiguration:[<span class="built_in">NSURLSessionConfiguration</span> defaultSessionConfiguration] delegate:<span class="keyword">self</span> delegateQueue:<span class="literal">nil</span>];</span><br><span class="line">    <span class="keyword">self</span>.task = [session dataTaskWithRequest:<span class="keyword">self</span>.request];</span><br><span class="line">    [<span class="keyword">self</span>.task resume];</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>关键的方法就是 <code>- (NSDictionary* )responseWithRequest:(NSURLRequest *)request</code> ,尝试加载request请求的本地资源，如果没有<em>可加载的</em>本地资源，则返回nil。如果有找到<em>可用的</em>本地资源，则返回。<br>PLResourceLoader 是一个单例类，模块启动的时候会调用 checkUpdate 方法检查更新。</p>
+<ol>
+<li>checkUpdate 方法会首先 loadConfig 来加载缓存配置文件到内存中，也就是将上文提到的json文件解析成方便处理的数据结构;</li>
+<li>配置加载完成会校验本地缓存文件，同时请求缓存配置接口。本地文件以 “资源id-版本号” 的格式存储在 tmp 文件夹中。</li>
+<li>接口配置请求到资源后，会将配置文件写到本地，并开启线程在后台下载资源和打diff包。并删除废弃的资源(不在 resourceList 中的文件)。</li>
+<li>responseWithRequest 方法中，会根据匹配规则和生效时间寻找本地是否有对应的缓存文件，如果有则生成对应的 response 返回。 </li>
+</ol>
+<h3 id="跨域问题"><a href="#跨域问题" class="headerlink" title="跨域问题"></a>跨域问题</h3><p>H5页面的 URL 换成自定义的scheme后会产生跨域问题，解决方法可以在服务器中 添加自定义的schame来解决。但由于浏览器的安全性问题，非https协议的请求直接无法发出。我在 WKWebview 容器中将js的 <code>fetch</code> 方法里将自定义schame换成了 https，因为接口的请求是不需要缓存在本地的。这能能满足大多数接口请求。<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSDictionary</span> *webParams = @&#123;<span class="string">@"iphonex"</span>:@IS_IPHONEX,<span class="string">@"appversion"</span>:APP_VERSION,<span class="string">@"os"</span>:<span class="string">@"iphone"</span>&#125;;</span><br><span class="line"><span class="built_in">NSString</span> *javaScriptSource = <span class="string">@"var s_ajaxSwizzle=&#123;&#125;;s_ajaxSwizzle.tempOpen= XMLHttpRequest.prototype.open;XMLHttpRequest.prototype.open=function(a,b)&#123;if(b)&#123;b=b.replace(/^(自定义schame\\:\\/\\/)|^(\\/\\/)/,\"https://\")&#125;s_ajaxSwizzle.tempOpen.apply(this,arguments)&#125;;"</span>;</span><br><span class="line">javaScriptSource = [javaScriptSource stringByAppendingFormat:<span class="string">@"window.PLParams=%@;"</span>,[webParams JSONString]];</span><br><span class="line"><span class="keyword">if</span> (IOSVersion_10)&#123;</span><br><span class="line">  javaScriptSource = [javaScriptSource stringByAppendingString:<span class="string">@"if(self.fetch)&#123;var swizzlefetch=self.fetch;self.fetch=function(a,b)&#123;if(a)&#123;a=a.replace(/^(自定义schame\\:\\/\\/)|^(\\/\\/)/,\"https://\")&#125; return swizzlefetch.apply(this,arguments)&#125;&#125;"</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">WKUserScript</span> *ajaxSwizzle = [[<span class="built_in">WKUserScript</span> alloc] initWithSource:javaScriptSource injectionTime:<span class="built_in">WKUserScriptInjectionTimeAtDocumentStart</span> forMainFrameOnly:<span class="literal">YES</span>];</span><br><span class="line">[webView.configuration.userContentController addUserScript:ajaxSwizzle];</span><br></pre></td></tr></table></figure></p>
+<h2 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h2><p>这个离线包机制放到线上用的效果还是不错的，web网络加载的时间基本可以忽略了，剩下的基本就是web渲染的时间了。 </p>
+<p>文章是把实现IOS代码的主要部分描述出来了，打包相关的和服务端接口的实现都还没出来，以后有时间再写一篇记录下来。 </p>
+<p>还差个流程图也没时间画了，以后有空再补上吧。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">eGPU</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">显卡</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">H5</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">系统</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">IOS</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">折腾</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">WKWebview</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/IOS/" class="article-tag-list-link color4">IOS</a>
+        		</li>
+      		
+		</ul>
+	</div>
 
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://skyvoid.com/2017/09/22/IOS中wkwebview的离线缓存版本控制/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2017/08/22/14年MBPR外接显卡记录-Akitio-Node/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">14年MBPR外接显卡记录(Akitio Node via TB3-&gt;TB2 adapter + GTX1060 + win10/macOS)</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  
   
 
-    
+  
+
+  
+    <section id="comments">
+      <div id="disqus_thread"></div>
+        <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'skyvoid'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
+  
 
 
           </div>
@@ -250,9 +412,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",

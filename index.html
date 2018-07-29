@@ -12,6 +12,7 @@
 <meta property="og:title" content="一个橙子的博客">
 <meta property="og:url" content="http://skyvoid.com/index.html">
 <meta property="og:site_name" content="一个橙子的博客">
+<meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一个橙子的博客">
   
@@ -54,9 +55,11 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/随笔/">随笔</a></li>
+				<li><a href="/tags/折腾/">折腾</a></li>
 	        
 				<li><a href="/tags/solr/">solr</a></li>
+	        
+				<li><a href="/tags/IOS/">IOS</a></li>
 	        
 			</ul>
 		</nav>
@@ -116,6 +119,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -136,11 +141,13 @@
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
+					<li style="width: 25%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 25%"><a href="/tags/折腾/">折腾</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags/solr/">solr</a></li>
+					<li style="width: 25%"><a href="/tags/solr/">solr</a></li>
+		        
+					<li style="width: 25%"><a href="/tags/IOS/">IOS</a></li>
 		        
 				</ul>
 			</nav>
@@ -156,6 +163,90 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-IOS中wkwebview的离线缓存版本控制" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/22/IOS中wkwebview的离线缓存版本控制/">IOS中wkwebview的离线缓存版本控制</a>
+    </h1>
+  
+
+        
+        <a href="/2017/09/22/IOS中wkwebview的离线缓存版本控制/" class="archive-article-date">
+  	<time datetime="2017-09-22T07:21:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>我们IOS主app下面的一个内容模块是H5页面，H5页面首次打开的时候需要等待网络加载，用户体验会比原生的差很多。但是这个H5站点暂时是不会用其他方式再实现一次了。所以先从WEB容器上面做手脚。<br>WKWebview本身是有缓存机制的，但是第一次加载的时候难免需要从网络请求。然后就有了做个离线包的想法。<br>原理很简单，在IOS打包的时候，直接把静态资源压缩，将压缩包放进App安装包中。这样第一次打开就不用从网络请求了。<br></p>
+        
+          <a class="article-more-a" href="/2017/09/22/IOS中wkwebview的离线缓存版本控制/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">H5</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">IOS</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">WKWebview</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/IOS/" class="article-tag-list-link color4">IOS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/09/22/IOS中wkwebview的离线缓存版本控制/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
   
     <article id="post-14年MBPR外接显卡记录-Akitio-Node" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -184,59 +275,10 @@
 <li>雷电2/雷电3口双向转换器 (TB3-&gt;TB2 adapter)</li>
 <li>雷电2传输线一条</li>
 <li>早年的19寸三星显示器一台<blockquote>
-<p>以上总花费大约在3500RMB</p>
-</blockquote>
-</li>
-</ol>
-<h2 id="细节说明"><a href="#细节说明" class="headerlink" title="细节说明"></a>细节说明</h2><h3 id="组装连接设备"><a href="#组装连接设备" class="headerlink" title="组装连接设备"></a>组装连接设备</h3><ol>
-<li>打开akitio node，将显卡装入盒子中<br><img src="/2017/08/22/14年MBPR外接显卡记录-Akitio-Node/8ca0273d9c5f.png" alt="显卡装上的效果"></li>
-<li>装好盒子，将 TB3-&gt;TB2 adapter 的雷电3公头插入 node，雷电2传输线连接 macbook pro 和转接头</li>
-<li>akitio node 盒子插上电源、显示器，大功告成。</li>
-</ol>
-<h3 id="mac-os下"><a href="#mac-os下" class="headerlink" title="mac os下"></a>mac os下</h3><ul>
-<li>我用系统版本为当前最新的稳定版10.12.6，早期版本可能雷电2/3适配器会出现问题。</li>
-<li>苹果官方将在秋季正式推出的 10.13 版本中给予外接显卡原生的支持，不过目前的beta版中，只能识别如RX580等A卡。</li>
-<li>目前所有版本的mac os系统均不能原生支持外置的N卡，需要使用一个国外大神的脚本（<a href="https://github.com/goalque/automate-eGPU.git" target="_blank" rel="external">automate-eGPU.sh</a>）破解。<h4 id="安装流程"><a href="#安装流程" class="headerlink" title="安装流程"></a>安装流程</h4></li>
-</ul>
-<ol>
-<li>macbook 连上 akitio 后，打开电源，应该就能在“系统报告”中识别到 akitio node 设备。(如果显示”unsupport”字样，可能是系统版本或者akitio node固件版本问题，因为之前苹果封禁了akitio node的设备，这个问题可以通过升级系统、升级akitio固件或者执行破解借本解决)<br><img src="/2017/08/22/14年MBPR外接显卡记录-Akitio-Node/f56e4e5ad2e7.png" alt="设备信息"></li>
-<li>关闭苹果的系统完整性保护( System Integrity Protection )  <ul>
-<li>可以先查一下,终端输入:csrutil status。如果是disable的话，就不用下面的操作了，如果是enable，则下一步。</li>
-<li>开机时按 Command-R, 进入恢复模式，在该模式下进入终端输入: csrutil disable; reboot。</li>
-</ul>
-</li>
-<li>挂载显卡:  <ul>
-<li>正常开机进入系统;</li>
-<li>插入 akitio node 的状态下,在终端进入automate-eGPU.sh所在目录，执行: sudo ./automate-eGPU.sh</li>
-<li>上面脚本会自动安装显卡驱动什么的，正常执行完了，外置显卡应该就能正常使用了。<br><img src="/2017/08/22/14年MBPR外接显卡记录-Akitio-Node/0cab9242da55.png" alt="识别到显卡"> （识别到显卡设备）<br><img src="/2017/08/22/14年MBPR外接显卡记录-Akitio-Node/b324cbb86b82.png" alt="显示器输出"><br>（开了f.lux护眼，屏幕泛黄）</li>
-</ul>
-</li>
-</ol>
-<h3 id="window10"><a href="#window10" class="headerlink" title="window10"></a>window10</h3><p>windows下面操作稍微麻烦点。因为 macbook 开机时，检测到 eGPU 是，会自动关闭iGPU，然后看到的就是黑着屏幕的电脑。这个问题要用 “apple_set_os.efi” 来解决。<br>有时还会有“error 12”的问题,这个问题也有各种不同的解决方案。<br>我的安装过程还算比较顺利，用的是wtg系统，安装完rEFInd，直接启动，没有碰到 “error 12”的问题。下面是大致步骤:<br>1.下载安装 <a href="http://www.rodsbooks.com/refind/" target="_blank" rel="external">rEFInd</a>  </p>
-<ul>
-<li>到 rEFInd 官网下载 max os 版本的软件包，解压后执行目录的”refind-install”</li>
-<li><p>成功安装后，看一下系统有没有自动挂载“EFI”分区，如果已经自动挂载，跳过这步；没有挂载的话，手动挂载一下，执行:  </p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo mkdir /Volumes/efi</div><div class="line">sudo mount -t msdos /dev/disk0s1 /Volumes/efi</div></pre></td></tr></table></figure>
-</li>
-<li><p>下载 <a href="https://github.com/0xbb/apple_set_os.efi/releases" target="_blank" rel="external">apple_set_os.efi</a> ,这个是用来欺骗系统，使连接外置显卡开机时，内置显卡依然工作;</p>
-</li>
-<li>将下载的 apple_set_os.efi 文件放到 /Volumes/efi/EFI/custom 这个路径下面</li>
-<li>连接外置显卡，插入 win10 的 wtg U盘，重新启动电脑就可以看到如下画面:<br><img src="/2017/08/22/14年MBPR外接显卡记录-Akitio-Node/2166aeb47e48.png" alt="开机界面"></li>
-<li>先选中第一个 apple_set_os.efi ，回车；然后，我这里是选中第四个， EFI 方式启动 windows 系统；</li>
-<li>进入系统后，可以看到外界显示器和内置显示器都被点亮了。在设备管理器看到视频设备，然后去英伟达官网下载对应驱动安装。<br>安装成功…，显卡被正常识别。enjoy it~<br><img src="/2017/08/22/14年MBPR外接显卡记录-Akitio-Node/18b18d181541.png" alt="视频设备"></li>
-</ul>
-<h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><h5 id="mac下面的跑分"><a href="#mac下面的跑分" class="headerlink" title="mac下面的跑分"></a>mac下面的跑分</h5><p>  <img src="/2017/08/22/14年MBPR外接显卡记录-Akitio-Node/44bb42a27f48.png" alt="mac跑分"></p>
-<h5 id="tenserflow识别到设备"><a href="#tenserflow识别到设备" class="headerlink" title="tenserflow识别到设备"></a>tenserflow识别到设备</h5><p>  <img src="/2017/08/22/14年MBPR外接显卡记录-Akitio-Node/d26cdae1da6a.png" alt="tenserflow识别"></p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li><a href="https://egpu.io/setup-guide-external-graphics-card-mac/" target="_blank" rel="external">The Beginner’s eGPU Setup Guide for Mac</a>  </li>
-<li><a href="https://egpu.io/forums/mac-setup/how-to-keep-mbps-irisiris-pro-activated-when-booting-into-windows-boot-camp/paged/1/" target="_blank" rel="external">keeping iGPU activated when booting into Windows using apple_set_os.efi</a>  </li>
-<li><a href="https://egpu.io/forums/mac-setup/automate-egpu-sh-is-reborn-with-amd-polaris-fiji-support-for-macos/#post-1487" target="_blank" rel="external">[Sticky] [SCRIPT] automate-eGPU.sh v1.0.1 - macOS eGPU installation tool</a>  </li>
-<li><a href="https://egpu.io/forums/mac-setup/internal-display-works-on-amd-2016-macbooks/#post-54" target="_blank" rel="external">2016 15” Macbook Pro RP450 + GTX1080@32Gbps-TB3 (Razer Core) + GTX1080 internal LCD + Win10 [alec]^</a>    </li>
-<li><a href="https://egpu.io/forums/implementation-guides/2015-macbook-pro-retina-15-tb2-apple-adapter-akitio-node-gtx-1060-win10-success/" target="_blank" rel="external">2015 15” Macbook Pro M370x + GTX1060@16Gbps-TB2 (AKiTiO Node via TB3-&gt;TB2 adapter) + Win10 [mdr1a]^ </a>  </li>
-<li><a href="https://www.youtube.com/watch?v=AR_7DPtXWZA" target="_blank" rel="external">eGPU setup 2013 rMBP GT750M + Akitio Thunder2 GTX 1060 (OPTIMUS enabled)</a> </li>
-<li><a href="https://egpu.io/forums/pc-setup/fix-dsdt-override-to-correct-error-12/" target="_blank" rel="external">[GUIDE] DSDT override eGPU error 12 fix</a></li>
-</ul>
-
+<p>以上总花费大约在3500RMB</p></blockquote></li></ol>
+        
+          <a class="article-more-a" href="/2017/08/22/14年MBPR外接显卡记录-Akitio-Node/#more">more >></a>
+        
       
 
       
@@ -306,36 +348,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>最近在开发地图页面的时候，有个需求是国内使用腾讯地图，国外使用谷歌地图。做这个需的时候就想封装一下地图sdk，使之对业务逻辑透明，这样可以复用业务逻辑。想到定义接口(interface或protocol)，谷歌、腾讯地图实现(implement)一下具体的操作就可以了。<br> <em>注:javascript本身是轻巧的弱类型动态语言，不太鼓励引入接口(Interface)这个特性。该不该在js中使用接口这个问题，网上不少讨论。毕竟现在用js来写的项目毕竟以前大很多了，这次还是尝试下在项目中使用接口来规范方法定义。</em>  </p>
-<p>在JavaScript中使用接口，我想到实现的方式大体可以归为两类，一种是运行时检查，一种是编译(打包)时检查：</p>
-<ul>
-<li><em>运行前检查:</em> 通过约定的格式书写代码，在编译(打包)的时候通过打包工具来检查是否通过实现了接口。<ul>
-<li>好处 ： 减小运行时的额外开销，减小代码体积，还能提前报错。</li>
-<li>缺点 ： 要编写相应的检测逻辑(或者测试用例)或者代码分析器，覆盖可能不全。</li>
-</ul>
-</li>
-<li><em>运行时检查:</em> 执行脚本时，在生成对象的时候，通过置于脚本中的逻辑来判断是否实现了接口，没有的话则抛出异常。<ul>
-<li>优点 :  实现比较简单，简单的编写一次就可以重复用了。</li>
-<li>缺点 :  会有些额外开销，执行到的时候才能报错。</li>
-</ul>
-</li>
-</ul>
-<p>因为性能影响不明显，就怎么简单怎么来了，这次就研究在运行时检查的方法。</p>
-<h2 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h2><p>模拟接口的目的本来就是为了利于开发，所以实现起来就要整洁好看点。然后，才是开销少点吧。  </p>
-<ul>
-<li>我首先想到可以利用ES6类定义的extends来模拟，自己模拟一个虚基类，然后继承虚基类。C++也是可以通过继承虚基类来达成使用接口的特性的目的；不过C++是支持多继承的，js是不支持这种变态的设计的。js不能多继承，如果继承了虚基类(模拟的接口)，就不能继承父类了。怎么办呢？<br>好在有js的动态特性，可以直接构造出一个父类出来，大概可以是下面两种写法：  </li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">class MyClass extends interface(superclass,face1,face2,face3)&#123;&#125;</div><div class="line"></div><div class="line">class MyClass extends interface(superclass,[face1,face2,face3])&#123;&#125;</div></pre></td></tr></table></figure>
-<p>这样写就比较像接口的语法了，其中 interface 函数做的作用就是返回一个继承了 superclass 的类,faceN为要实现的接口。interface方法要检查 MyClass 这个类是否实现了接口中定义的方法;以及，在原型的特定对象中记录下该类实现的接口列表，用于使用对象时判断该对象实现的接口类型。  </p>
-<ul>
-<li>具体在我做的这个项目中，没有按上面的来做，简单的做了个实现。因为涉及到两个地图操作的封装和切换，所以用了委托代理模式，把相关操作分别委托给两个实现了接口的对象。我的书写方式大致像下面:</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">class MyClass extends mapinterface(mapbase,options.type==&apos;qq&apos;?mapqq:mapgoogle) &#123;&#125;</div></pre></td></tr></table></figure>
-<h2 id="主要代码"><a href="#主要代码" class="headerlink" title="主要代码"></a>主要代码</h2><p>下面是我在interface中用于实现查询是否的主要代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">//checkImp</div><div class="line">let mapinterface = ( superclass, implement ) =&gt; class extends superclass &#123;</div><div class="line">    constructor (options) &#123;</div><div class="line">        super(options);</div><div class="line">        //checkImp</div><div class="line">        (()=&gt;&#123;</div><div class="line">            var imp = implement.prototype;</div><div class="line">            var memberList = Object.getOwnPropertyNames(mapinterface(Object,&apos;check&apos;).prototype);</div><div class="line">            for (var key in memberList)&#123;</div><div class="line">                var mothed = memberList[key];</div><div class="line">                if (typeof imp[mothed] !== &apos;function&apos;)&#123;   </div><div class="line">                    throw new Error(&apos;接口方法&apos; + mothed + &apos; 没有实现&apos;);</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;)();</div><div class="line"></div><div class="line">        this._mapImplement = new implement;</div><div class="line">        var implementName = implement.prototype.constructor.name;</div><div class="line">        this._mapImplements[implementName] = this._mapImplement; </div><div class="line"></div><div class="line">    &#125;</div><div class="line">    //下面是接口列表</div><div class="line">    removeListener (listener) &#123;</div><div class="line">        this._mapImplement.removeListener.apply(this,arguments);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    .....</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p><em>注释:因为class定义的方法是不可枚举的，所以用了getOwnPropertyNames方法。</em></p>
-<p>运行的效果如下:<br><img src="/2017/07/04/在JavaScript中模拟接口/error.png" alt="报错效果"></p>
-<h2 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h2><p>除了上面的思路，还是有很多其他更好的办法的，比如直接给已经实例化好的对象直接添加接口类型和实现，js还是灵活。<br>实现可能有点蠢，等有时间慢慢琢磨下，应该还能做不少改进。</p>
-
+        <p>最近在开发地图页面的时候，有个需求是国内使用腾讯地图，国外使用谷歌地图。做这个需的时候就想封装一下地图sdk，使之对业务逻辑透明，这样可以复用业务逻辑。想到定义接口(interface或protocol)，谷歌、腾讯地图实现(implement)一下具体的操作就可以了。<br> <em>注:javascript本身是轻巧的弱类型动态语言，不太鼓励引入接口(Interface)这个特性。该不该在js中使用接口这个问题，网上不少讨论。毕竟现在用js来写的项目毕竟以前大很多了，这次还是尝试下在项目中使用接口来规范方法定义。</em><br></p>
+        
+          <a class="article-more-a" href="/2017/07/04/在JavaScript中模拟接口/#more">more >></a>
+        
       
 
       
@@ -430,124 +446,10 @@
 <li><a href="#参考">参考</a></li>
 </ul>
 <!-- /TOC -->
-<h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>最近两个迭代需要优化搜索功能。因为最开始部门的搜索是lucene1.x或者2.x时代弄的，已经不能用了。去年的同事重新用solr-4.10.4搭了个服务，前几个月也走了，目前这个solr是处于没人维护的状态。而这个给上层提供基础全文检索的solr服务已经不能满足需求了，必须要改动。这次重新搭建了solrcloud服务,现在把搭建过程整理出来。<br>迭代开始前，去了解了lucene和solr，关于这两个东西的认识：<em>Lucene就是一套提供基于倒排索引()来实现全文检索的java包，solr又是基于Lucene封装成能很方便的通过http api请求来操作的web服务(还要借助于tomcat或者jetty等web容器来实现)。</em></p>
-<p>根据之前的同事留下的配置，有3台搜索服务器，看了下php代码，实际只用了一台。上服务器看也是单点。因为不少业务依赖这个全文搜索，想到两种方案:</p>
-<ul>
-<li>一种是把没有在负载上面的两台配置成主从，然后把负载切到主从上；最后配置好那台单点，全流量</li>
-<li>还有一种就是solrcloud  </li>
-</ul>
-<p>偶然在公司平台上发现实际上我们有超过10台虚拟机可以用来搭建搜索服务，那就一次到位，用solrcloud了。<br>另外还有都是基于lucene的Elasticsearch和Solr的对比，可以参考下。</p>
-<h1 id="搭建流程"><a href="#搭建流程" class="headerlink" title="搭建流程"></a>搭建流程</h1><ol>
-<li>原料准备:solr-6.5.0.tgz;jdk1.8;zookeeper;tomcat8;几个分词库</li>
-<li>配置webserver，jdk和tomcat</li>
-<li>在tomcat中部署solr</li>
-<li>zookeeper部署</li>
-<li>solr运行在zookeeper</li>
-<li>上传配置以及新建collection</li>
-<li>访问控制</li>
-</ol>
-<p><em>注:如果不需要配置solrcloud，前三步，再在solrconfig.xml里面配置主从同步就可以用了</em></p>
-<h1 id="具体操作"><a href="#具体操作" class="headerlink" title="具体操作"></a>具体操作</h1><h2 id="1-原料准备"><a href="#1-原料准备" class="headerlink" title="1. 原料准备"></a>1. 原料准备</h2><p>  目前官方的最新lucene版本时6.5.1,solr的是6.5.0。拍拍脑袋就大胆用最新版本搭建了，官网直接下载solr-6.5.0.tar.gz包即可。官方链接:<a href="http://lucene.apache.org/solr/" target="_blank" rel="external">http://lucene.apache.org/solr/</a><br>  solrcloud需要用到zookeeper、tomcat(也可以用自带的jetty，不过tomcat还是稍微熟悉点，配置也比较容易，出问题还可以问人)、jdk和一些扩展的jar包，大致如下：</p>
-<ol>
-<li>jdk1.8 : zookeeper、solr和tomcat都需要jdk,solr6.5.0依赖1.8以上的jdk。直接从官网上下jdk-8u131-macosx-x64.dmg或者jdk-8u131-linux-x64.tar.gz。</li>
-<li>zookeeper，在官网下载zookeeper3.4.10版本。</li>
-<li>然后我部署分词库用的是ik，拼音用的是pinyin4j。这两个库都是开源的，可以下载下来定制。</li>
-<li>关于tomcat，wiki上面是这样说的:<blockquote>
-<p>No Longer Supported<br>Beginning with Solr 5.0, Support for deploying Solr as a WAR in servlet containers like Tomcat is no longer supported.<br>For information on how to install Solr as a standalone server, please see Installing Solr.</p>
-</blockquote>
-</li>
-</ol>
-<p>  网上说用tomcat8不会出问题，这里用的是tomcat8。<br>  都下载好后，分别解压到一个目录，备用。</p>
-<h2 id="2-webserver的配置"><a href="#2-webserver的配置" class="headerlink" title="2. webserver的配置"></a>2. webserver的配置</h2><ul>
-<li>先配置jdk1.8(已经有的忽略)。</li>
-<li>如果是mac环境，官网下载好的是一个dmg包，双击自动安装即可。</li>
-<li><p>如果是Linux环境，将安装包解压后，配置环境变量$JAVA_HOME和$PATH，记得用source指令生效:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">JAVA_HOME=/home/work/webserver/jdk</div><div class="line">JAVA_BIN=/home/work/webserver/jdk/bin</div><div class="line">PATH=$PATH:$JAVA_BIN</div><div class="line">CLASSPATH=$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar</div><div class="line">export JAVA_HOME JAVA_BIN PATH CLASSPATH</div></pre></td></tr></table></figure>
-</li>
-<li><p>启动tomcat，同样解压tomcat的tar包，如果不做特别的配置，直接进入tomcat的bin目录，执行./startup.sh启动tomcat服务。</p>
-</li>
-<li>没什么问题的话，浏览器访问8080端口就能看到tomcat的欢迎页了。</li>
-</ul>
-<h2 id="3-在tomcat中部署solr"><a href="#3-在tomcat中部署solr" class="headerlink" title="3. 在tomcat中部署solr"></a>3. 在tomcat中部署solr</h2><p>  solr 的安装也很简单。如果不用tomcat,solr5之后，solr都自带jetty，里面有已经配置好，可以直接执行jetty的start.jar来启动solr服务。<br>  如果需要在 tomcat 中启动，我们只需要将solr的站点和jar包从jetty的项目下面拷贝到tomcat，稍微做些配置就可以了。</p>
-<p>  <strong> 具体步骤 ：</strong></p>
-<ol>
-<li>拷贝solr 站点（提供 solr 的web服务主要就靠它了）。进入solr 包解压目录下, 将server/solr-webapp 目录下面的webapp文件夹拷贝到tomcat的webapp目录中，命名为solr（就是站点名字，可根据自己需求命名）;</li>
-<li>拷贝依赖的jar包，各种用到的方法都封装在里面了。将下面这些 jar 包拷贝到tomcat/webapps/solr/WEB-INF/lib 中:<br>1) solr/server/lib/ext 中的<em>.jar<br>2) solr/server/lib/metrics</em><br>3) 所使用分词库和拼音处理的lib，这里是ik和pinyin4j</li>
-<li>拷贝配置文件到 tomcat/webapps/solr/WEB-INF/classes 里的<br>1) solr/resource/solr-6.5.1/server/resources/log4j.properties<br>2) 如果使用了ik分词库,将分词库中的 IKAnalyzer.cfg  文件拷贝过来并配置词库路径(词库位置是相对于classes目录)</li>
-<li><p>配置 tomcat/webapp/solr/WEB-INF/web.xml 中的 solr/home 节点，如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;env-entry&gt;</div><div class="line">&lt;env-entry-name&gt;solr/home&lt;/env-entry-name&gt;</div><div class="line">&lt;env-entry-value&gt;~/solr-cores&lt;/env-entry-value&gt;</div><div class="line">&lt;env-entry-type&gt;java.lang.String&lt;/env-entry-type&gt;</div><div class="line">&lt;/env-entry&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>创建 ~/solr-cores 文件夹(用来保存cores的) ，并将 solr 包路径下面的 server/solr/solr.xml 文件拷贝到 ~/solr-cores文件夹中</p>
-<p>完成上面几步，重新启动tomcat，访问localhost:8080/solr/index.html，如果一切正常，就可以进入solr的web后台了。<br>如果访问出错，可以根据 log4j.properties 中配置的 log 名称，找到运行日志，查看报错；或者可以就通过 tomcat/bin/catalina.sh run 来运行，直接在控制台中查看报错。<br><strong>这时候单点的 solr 服务就算安装完毕了。</strong></p>
-<p><em>注:solr6已经不需要在tomcat中手动添加tomcat-user.xml中来进行权限控制，可以通过security.json文件来配置。</em></p>
-</li>
-</ol>
-<h2 id="4-部署zookeeper"><a href="#4-部署zookeeper" class="headerlink" title="4. 部署zookeeper"></a>4. 部署zookeeper</h2><p>  进入zookeeper安装目录, 执行<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cp ./conf/zoo_sample.cfg ./conf/zoo.cfg</div></pre></td></tr></table></figure></p>
-<p>  然后编辑 ./conf/zoo.cfg ,我的配置如下：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">tickTime=2000</div><div class="line">initLimit=10</div><div class="line">syncLimit=5</div><div class="line">dataDir=/home/work/data/zookeeper-data</div><div class="line">dataLogDir=/home/work/data/zookeeper-data/logs</div><div class="line">server.1=BOE-Newsearch-08:2888:3888</div><div class="line">server.2=BOE-Newsearch-07:2888:3888</div><div class="line">#zookeeper的节点列表，格式如下</div><div class="line">#server.节点编号=节点host:通信端口:选主端口</div><div class="line">#...</div><div class="line">server.10=LOC-search-03:2888:3888</div><div class="line">server.11=LOB-search-04:2888:3888</div><div class="line">clientPort=2181</div></pre></td></tr></table></figure></p>
-<p>  新建下面目录：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">/home/work/data/zookeeper-data  </div><div class="line">/home/work/data/zookeeper-data/logs</div></pre></td></tr></table></figure></p>
-<p>  然后新建myid:<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">echo &apos;1&apos; &gt;&gt; /home/work/data/zookeeper-data/myid</div></pre></td></tr></table></figure></p>
-<p>  期中 1 为该机器的节点编号。</p>
-<p>  启动 zookeeper/bin 目录下面的 zookeeper 服务 ( zookeeper.out文件默认在启动目录下生成 ):<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[work@LOB-search-04 bin]$ ./zkServer.sh start</div><div class="line">ZooKeeper JMX enabled by default</div><div class="line">Using config: /home/work/zookeeper/bin/../conf/zoo.cfg</div><div class="line">Starting zookeeper ... STARTED</div></pre></td></tr></table></figure></p>
-<p>  查看 zookeeper 运行启动状态，下面状态就说名正常了，如果不正常，会提示没有启动<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[work@LOB-search-04 bin]$ ./zkServer.sh status</div><div class="line">ZooKeeper JMX enabled by default</div><div class="line">Using config: /home/work/zookeeper/bin/../conf/zoo.cfg</div><div class="line">Mode: follower</div></pre></td></tr></table></figure></p>
-<p>  最后各个节点按照相同的方法部署即可。     </p>
-<h2 id="5-solr运行在zookeeper"><a href="#5-solr运行在zookeeper" class="headerlink" title="5. solr运行在zookeeper"></a>5. solr运行在zookeeper</h2><p>  以cloud模式启动solr的方法很多，我是通过在tomcat启动脚本添加参数来实现的，具体做法如下：<br>  在 tomcat/bin 目录下，将 catalina.sh 和 startup.sh 两个文件分别拷贝一份，命名为 catalina_zk.sh 和 startup_zk.sh。<br>  修改startup_zk.sh的 EXECUTABLE 变量，改为：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">EXECUTABLE=catalina_zk.sh</div></pre></td></tr></table></figure></p>
-<p>  在 catalina_zk.sh 中添加下面参数:<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">JAVA_OPTS=&quot;$JAVA_OPTS -DzkHost=BOE-Newsearch-08:2181,BOE-Newsearch-07:2181,EON-newSearch-06:2181&quot;</div></pre></td></tr></table></figure></p>
-<p>  使用startup_zk.sh 脚本启动solr，就可以以cloud模式启动solr了。<br>  此时再进入 solr 管理后台，Logging选项下面就会多出一个cloud分栏的选项了。</p>
-<h2 id="6-上传配置以及新建collection"><a href="#6-上传配置以及新建collection" class="headerlink" title="6. 上传配置以及新建collection"></a>6. 上传配置以及新建collection</h2><ol>
-<li>建立配置<br>进入 solr 解压目录，将 server/solr/configsets/basic_configs 目录拷贝一份，改名为 myexampleconfig。<br>根据需要可以修改myexampleconfig/conf文件夹中的managed-schema文件和solrconfig.xml，也可以后到solradmin中修改。</li>
-<li><p>上传配置<br>有了配置之后，需要上传到 zookeeper 上让 solr 可以读取到。使用solr提供的工具，可以很方便的上传配置文件。是调用org.apache.solr.cloud.ZkCLI这个类的upconfig这个命令来上传的。<br>我将上传的方法写到一个如下的配置文件：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">#!/bin/sh</div><div class="line">configName=$1</div><div class="line">zkHost=BOE-Newsearch-08:2181,BOE-Newsearch-07:2181,EON-newSearch-06:2181</div><div class="line">if [ -z &quot;$configName&quot; ]; then</div><div class="line">  echo &quot;配置名为空&quot;</div><div class="line">  echo &quot;exit 1&quot;</div><div class="line">  exit 1</div><div class="line">fi</div><div class="line">configPath=$(cd `dirname $0`; pwd)&quot;/../configsets/&quot;$configName&quot;/conf&quot;</div><div class="line">if [ ! -d &quot;$configPath&quot; ]; then</div><div class="line">  echo &quot;配置目录\&quot;&quot;$configPath&quot;\&quot;不存在&quot;</div><div class="line">  echo &quot;exit 2&quot;</div><div class="line">  exit 2</div><div class="line">fi</div><div class="line">echo &quot;开始上传配置,配置名:&quot;$configName</div><div class="line">java -classpath .:$(cd `dirname $0`; pwd)/../tomcat8/webapps/solr/WEB-INF/lib/* \</div><div class="line">  org.apache.solr.cloud.ZkCLI -cmd upconfig \</div><div class="line">  -zkhost $zkHost \</div><div class="line">  -confdir $configPath -confname $configName</div></pre></td></tr></table></figure>
-<p>这个脚本放在相对于配置文件目录上级目录的./script/目录下面，命名为uploadconfig.sh，执行该脚本将配置上传到zookeeper:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">panzhuodeMacBook-Pro:script pan$ ./uploadConfig.sh myexampleconfig</div></pre></td></tr></table></figure>
-<p>上传完毕后，点开 solrAdmin 中的 cloud 栏目的 Tree 子栏目，里面可以查看zookeeper节点中的目录，应该能在configs中看到刚才上传的配置文件。</p>
-</li>
-<li>新建collection<br>网上很多都是使用webapi的方式访问url新建，官网上文档说的比较详细。我这里用的比较懒的办法，直接在solrAdmin的collections分栏下面点击“Add collection”新建。</li>
-</ol>
-<h2 id="7-访问控制"><a href="#7-访问控制" class="headerlink" title="7. 访问控制"></a>7. 访问控制</h2><p>  solr作为web服务运行，如果不做权限控制任何能访问这个web地址的人都能随意对上面数据进行增删改查，这是不能接受的。对此，有必要进行权限控制的配置:</p>
-<ol>
-<li><p>http访问控制<br>http访问验证是solr5以后提供的，可以让用户以不同的身份访问solr时获得不同的权限级别。操作如下:<br>1) 新建security.json,内容如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">&quot;authentication&quot;:&#123;</div><div class="line">  &quot;class&quot;:&quot;solr.BasicAuthPlugin&quot;,</div><div class="line">  &quot;blockUnknown&quot;: true,</div><div class="line">  &quot;credentials&quot;:&#123;&quot;solr&quot;:&quot;IV0EHq1OnNrj6gvRCwvFwTrZ1+z1oBbnQdiVC3otuq0= Ndd7LKvVBAaZIF0QAVi1ekCfAJXr1GGfLtRUXhgrF8c=&quot;&#125;</div><div class="line">&#125;,</div><div class="line">&quot;authorization&quot;:&#123;</div><div class="line">  &quot;class&quot;:&quot;solr.RuleBasedAuthorizationPlugin&quot;,</div><div class="line">  &quot;permissions&quot;:[&#123;&quot;name&quot;:&quot;security-edit&quot;,</div><div class="line">  &quot;role&quot;:&quot;admin&quot;&#125;]</div><div class="line">  &quot;user-role&quot;:&#123;&quot;solr&quot;:&quot;admin&quot;&#125;</div><div class="line">&#125;&#125;</div></pre></td></tr></table></figure>
-<p>2) 上传到zookeeper根目录<br>在solr解压目录下，执行:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./bin/solr zk cp file:/home/work/solrspace/security.json zk:/security.json -z BOE-Newsearch-08:2181,BOE-Newsearch-07:2181</div></pre></td></tr></table></figure>
-<p>3) 使用账户名为”solr”，密码为”SolrRocks”认证就可以以admin的角色访问solr访问solrAdmin。给予这个权限，可以使用webapi添加修改用户或者给用户各个节点不同的读写权限，具体配置可以看<a href="http://people.apache.org/~ctargett/RefGuidePOC/jekyll-full/rule-based-authorization-plugin.html" target="_blank" rel="external">文档</a>。</p>
-</li>
-<li><p>zookeeper访问权限控制  </p>
-<p>solr支持zookeeper的acl权限控制，防止未经验证的用户修改zookeeper文件。<br><strong>注意,下面的操作需要在关闭solr服务的情况下进行。</strong><br>1) zookeeper的digest授权方式的账户密码是要讲密码先sha1，再将结果base64来编码，要先通过下面指令生成密码:  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">echo -n username:password | openssl dgst -binary -sha1 | openssl base64</div></pre></td></tr></table></figure>
-<p>得到”+Ir5sN1lGJEEs8xBZhZXKvjLJ7c=”这个字符串。<br>2) 给目录添加digest权限<br>先登录zookeeper，进入zookeeper的bin目录，执行指令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./zkCli.sh -server BOE-Newsearch-08</div></pre></td></tr></table></figure>
-<p>完成后应该就登录到服务器设置权限了:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[zk: BOE-Newsearch-08(CONNECTED) 0] setAcl /collections digest:username:+Ir5sN1lGJEEs8xBZhZXKvjLJ7c=:rwacd</div></pre></td></tr></table></figure>
-<p>设置完成后可以用过下面命令查看刚才设置的权限:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[zk: BOE-Newsearch-08(CONNECTED) 1] getAcl /collections</div><div class="line">&apos;digest,&apos;username:+Ir5sN1lGJEEs8xBZhZXKvjLJ7c=</div><div class="line">: cdrwa</div></pre></td></tr></table></figure>
-<p>出现上面信息就是设置好了，接着用同样方法可以对/security.json和/configs设置权限。  </p>
-<p>3) 在catalina_zk.sh和uploadConfig.sh中添加登录信息，修改如下:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">#catalina_zk.sh</div><div class="line">#在之前的$JAVA_OPTS变量下面再加上:</div><div class="line">JAVA_OPTS=&quot;$JAVA_OPTS -DzkDigestUsername=username -DzkDigestPassword=password&quot;   #ZK ACLS</div></pre></td></tr></table></figure>
-<p>uploadConfig.sh更改后的文件为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">#!/bin/sh</div><div class="line">configName=$1</div><div class="line">zkHost=BOE-Newsearch-08:2181,BOE-Newsearch-07:2181,EON-newSearch-06:2181</div><div class="line">if [ -z &quot;$configName&quot; ]; then</div><div class="line">  echo &quot;配置名为空&quot;</div><div class="line">  echo &quot;exit 1&quot;</div><div class="line">  exit 1</div><div class="line">fi</div><div class="line">configPath=$(cd `dirname $0`; pwd)&quot;/../configsets/&quot;$configName&quot;/conf&quot;</div><div class="line">if [ ! -d &quot;$configPath&quot; ]; then</div><div class="line">  echo &quot;配置目录\&quot;&quot;$configPath&quot;\&quot;不存在&quot;</div><div class="line">  echo &quot;exit 2&quot;</div><div class="line">  exit 2</div><div class="line">fi</div><div class="line">echo &quot;开始上传配置,配置名:&quot;$configName</div><div class="line">java -classpath .:$(cd `dirname $0`; pwd)/../tomcat8/webapps/solr/WEB-INF/lib/* \</div><div class="line">-DzkACLProvider=org.apache.solr.common.cloud.VMParamsAllAndReadonlyDigestZkACLProvider \</div><div class="line">-DzkCredentialsProvider=org.apache.solr.common.cloud.VMParamsSingleSetCredentialsDigestZkCredentialsProvider \</div><div class="line">-DzkDigestUsername=admin-user -DzkDigestPassword=tripSolr@123456-O \</div><div class="line">org.apache.solr.cloud.ZkCLI -cmd upconfig \</div><div class="line">-zkhost $zkHost \</div><div class="line">-confdir $configPath -confname $configName</div></pre></td></tr></table></figure>
-<p>4) 配置solr-cores下面的solr.xml,主要修改zkCredentialsProvider和zkACLProvider这两个节点</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</div><div class="line">&lt;solr&gt;</div><div class="line">&lt;solrcloud&gt;</div><div class="line">&lt;str name=&quot;host&quot;&gt;$&#123;host:&#125;&lt;/str&gt;</div><div class="line">&lt;int name=&quot;hostPort&quot;&gt;$&#123;jetty.port:8080&#125;&lt;/int&gt;</div><div class="line">&lt;str name=&quot;hostContext&quot;&gt;$&#123;hostContext:solr&#125;&lt;/str&gt;</div><div class="line">&lt;bool name=&quot;genericCoreNodeNames&quot;&gt;$&#123;genericCoreNodeNames:true&#125;&lt;/bool&gt;</div><div class="line">&lt;int name=&quot;zkClientTimeout&quot;&gt;$&#123;zkClientTimeout:30000&#125;&lt;/int&gt;</div><div class="line">&lt;int name=&quot;distribUpdateSoTimeout&quot;&gt;$&#123;distribUpdateSoTimeout:600000&#125;&lt;/int&gt;</div><div class="line">&lt;int name=&quot;distribUpdateConnTimeout&quot;&gt;$&#123;distribUpdateConnTimeout:60000&#125;&lt;/int&gt;</div><div class="line">&lt;str name=&quot;zkCredentialsProvider&quot;&gt;org.apache.solr.common.cloud.VMParamsSingleSetCredentialsDigestZkCredentialsProvider&lt;/str&gt;</div><div class="line">&lt;str name=&quot;zkACLProvider&quot;&gt;org.apache.solr.common.cloud.VMParamsAllAndReadonlyDigestZkACLProvider&lt;/str&gt;</div><div class="line">&lt;/solrcloud&gt;</div><div class="line">&lt;shardHandlerFactory name=&quot;shardHandlerFactory&quot;</div><div class="line">class=&quot;HttpShardHandlerFactory&quot;&gt;</div><div class="line">&lt;int name=&quot;socketTimeout&quot;&gt;$&#123;socketTimeout:600000&#125;&lt;/int&gt;</div><div class="line">&lt;int name=&quot;connTimeout&quot;&gt;$&#123;connTimeout:60000&#125;&lt;/int&gt;</div><div class="line">&lt;/shardHandlerFactory&gt;</div><div class="line">&lt;/solr&gt;</div></pre></td></tr></table></figure>
-<p>上面步骤完成后，启动solr服务，如果能正常在solr管理后台cloud栏目的Tree下面看到zookeeper刚才配置权限的内容，就说明配置成功了。</p>
-</li>
-<li>防火墙<br>除了上面两个访问权限控制，限制访问solr集群的ip，可以更简单粗暴的阻止不相干的人直接访问到solr。防火墙的方案很多，这个可以根据具体环境选择了。</li>
-</ol>
-<h1 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h1><p> 完成上面的操作，solr的主要功能都可以正常使用了。<br>对于配置后一些可能遇到的坑，下面这篇博文可以参考下<a href="http://www.cnblogs.com/davidwang456/p/5241429.html" target="_blank" rel="external">《solrcloud使用中遇到的问题及解决方式》</a>。<br>另外还发现一篇超详细的使用手册，内容很多，没怎么看过，有兴趣的可以看看<a href="http://blog.csdn.net/thunder4393/article/details/44992485" target="_blank" rel="external">《SolrCloud部署和使用手册》</a>。</p>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
-<li><a href="http://www.cnblogs.com/wander1129/p/6658318.html" target="_blank" rel="external">Solr6.5在Centos6上的安装与配置 (一)</a></li>
-<li><a href="http://www.cnblogs.com/wander1129/archive/2017/04/05/6658828.html" target="_blank" rel="external">Solr6.5配置中文分词IKAnalyzer和拼音分词pinyinAnalyzer (二)</a></li>
-<li><a href="http://blog.csdn.net/zwx19921215/article/details/38428099" target="_blank" rel="external">SolrCloud 分布式集群安装部署（solr4.8.1 + zookeeper +tomcat）</a></li>
-<li><a href="http://blog.csdn.net/jiangchao858/article/details/52572635" target="_blank" rel="external">Solr6与Zookeeper在Tomcat环境做SolrCloud集群</a></li>
-<li><a href="https://wiki.apache.org/solr/SolrCloudTomcat" target="_blank" rel="external">SolrCloudTomcat</a></li>
-<li><a href="http://shiyanjun.cn/archives/100.html" target="_blank" rel="external">http://shiyanjun.cn/archives/100.html</a></li>
-<li><a href="http://www.656463.com/article/IFZjqm.htm" target="_blank" rel="external">solrcloud和zookeeper的搭建、使用、心得、教训</a></li>
-<li><a href="https://cwiki.apache.org/confluence/display/solr/Securing+Solr" target="_blank" rel="external">Securing Solr</a></li>
-<li><a href="http://people.apache.org/~ctargett/RefGuidePOC/jekyll-full/basic-authentication-plugin.html#BasicAuthenticationPlugin-EnableBasicAuthentication" target="_blank" rel="external">Basic Authentication Plugin</a></li>
-<li><a href="https://cwiki.apache.org/confluence/display/solr/Authentication+and+Authorization+Plugins" target="_blank" rel="external">Authentication and Authorization Plugins</a> </li>
-<li><a href="https://cwiki.apache.org/confluence/display/solr/ZooKeeper+Access+Control" target="_blank" rel="external">ZooKeeper Access Control</a></li>
-<li><a href="http://blog.csdn.net/sqh201030412/article/details/51396427" target="_blank" rel="external">solr入门之搭建具有安全控制和权限管理功能的SolrCloud集群</a></li>
-<li><a href="http://www.itnose.net/detail/6512994.html" target="_blank" rel="external">Zookeeper权限管理之坑</a></li>
-</ul>
-
+<h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>最近两个迭代需要优化搜索功能。因为最开始部门的搜索是lucene1.x或者2.x时代弄的，已经不能用了。去年的同事重新用solr-4.10.4搭了个服务，前几个月也走了，目前这个solr是处于没人维护的状态。而这个给上层提供基础全文检索的solr服务已经不能满足需求了，必须要改动。这次重新搭建了solrcloud服务,现在把搭建过程整理出来。<br>迭代开始前，去了解了lucene和solr，关于这两个东西的认识：<em>Lucene就是一套提供基于倒排索引()来实现全文检索的java包，solr又是基于Lucene封装成能很方便的通过http api请求来操作的web服务(还要借助于tomcat或者jetty等web容器来实现)。</em><br></p>
+        
+          <a class="article-more-a" href="/2017/05/10/solrcloud搭建记录/#more">more >></a>
+        
       
 
       
@@ -618,7 +520,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2017 anOrange
+    		&copy; 2018 anOrange
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -700,6 +602,18 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">javascript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">接口</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">eGPU</a>
               </li>
              
@@ -732,15 +646,15 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">javascript</a>
+                <a href="javascript:void(0)" class="js-tag color3">H5</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">接口</a>
+                <a href="javascript:void(0)" class="js-tag color4">IOS</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
+                <a href="javascript:void(0)" class="js-tag color5">WKWebview</a>
               </li>
             
             <div class="clearfix"></div>
@@ -796,23 +710,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
+              <a href="http://www.techxiang.cn/blog/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>江中小白龙</a>
             </li>
           
         </ul>
